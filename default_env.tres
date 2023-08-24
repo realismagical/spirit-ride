@@ -1,0 +1,14 @@
+[gd_resource type="Environment" load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Textures/hdrihaven_com_kiara_3_morning.jpg" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=1]
+radiance_size = 4
+panorama = ExtResource( 1 )
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 1 )
+fog_height_min = 0.0
+fog_height_max = 100.0
+ssao_quality = 0

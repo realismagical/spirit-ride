@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Cars/car1/car1.gltf" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Textures/Leather.jpg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 1, 0, 0, 1 )
+metallic = 0.6
+roughness = 0.7
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="car1" instance=ExtResource( 1 )]
+mass = 58.6735
+
+[node name="panel" parent="." index="0"]
+material/0 = SubResource( 2 )
+
+[node name="cambios" parent="." index="1"]
+material/0 = SubResource( 4 )
+
+[node name="silla" parent="." index="2"]
+material/0 = SubResource( 5 )
+
+[node name="chasis" parent="." index="3"]
+material/0 = SubResource( 8 )
+
+[node name="divisor" parent="." index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00145884, -0.00570619, 0.070212 )
+material/0 = SubResource( 6 )
+
+[node name="puerta" parent="." index="5"]
+material/0 = SubResource( 3 )
+
+[node name="manubrio" parent="." index="6"]
+material/0 = SubResource( 7 )
+
+[node name="left_front" parent="." index="7"]
+use_as_steering = true
+wheel_radius = 0.46
+wheel_rest_length = 0.03
+suspension_travel = 0.03
+suspension_stiffness = 100.0
+damping_compression = 0.3
+damping_relaxation = 0.5
+
+[node name="left_front" parent="left_front" index="0"]
+material/0 = SubResource( 9 )
+
+[node name="left_rear" parent="." index="8"]
+use_as_traction = true
+wheel_radius = 0.46
+wheel_rest_length = 0.03
+suspension_travel = 0.03
+suspension_stiffness = 100.0
+damping_compression = 0.3
+damping_relaxation = 0.5
+
+[node name="left_rear" parent="left_rear" index="0"]
+material/0 = SubResource( 10 )
+
+[node name="right_front" parent="." index="9"]
+use_as_steering = true
+wheel_radius = 0.46
+wheel_rest_length = 0.03
+suspension_travel = 0.03
+suspension_stiffness = 100.0
+damping_compression = 0.3
+damping_relaxation = 0.5
+
+[node name="right_front" parent="right_front" index="0"]
+material/0 = SubResource( 11 )
+
+[node name="right_rear" parent="." index="10"]
+use_as_traction = true
+wheel_radius = 0.46
+wheel_rest_length = 0.03
+suspension_travel = 0.03
+suspension_stiffness = 100.0
+damping_compression = 0.3
+damping_relaxation = 0.5
+
+[node name="right_rear" parent="right_rear" index="0"]
+material/0 = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="11"]
+transform = Transform( 1.77244, 0, 0, 0, 1.48009, 0, 0, 0, 4.58318, 0, 2.34403, 0.0811164 )
+shape = SubResource( 1 )

@@ -1,0 +1,24 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="SpiritRide"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://icon.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 1, 1, 1, 1 )
+config/icon="res://icon.png"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+environment/default_clear_color=Color( 0.611765, 0.803922, 0.941176, 1 )
